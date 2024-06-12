@@ -1,10 +1,9 @@
-name: First workflow
+name: Deployment Excersise
 on: workflow_dispatch
 jobs:
-  first-job:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Print greeting
-        run: |
-          echo "First Script"
-          echo "Second Script"
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install
