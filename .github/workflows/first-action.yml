@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: This is CI part
-        run: echo "Continueos integration is done"
+        run: ech "Continueos integration is done"
   CD:
+    needs: CI
     runs-on: ubuntu-latest
     steps:
       - name: This is CD part
