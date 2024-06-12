@@ -1,9 +1,14 @@
 name: Deployment Excersise
-on: workflow_dispatch
+on: [push, workflow_dispatch]
 jobs:
-  deploy:
+  CI:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Install
+      - name: This is CI part
+        run: echo "Continueos integration is done"
+  CD:
+    needs: CI
+    runs-on: ubuntu-latest
+    steps:
+      - name: This is CD part
+        run: echo "Deploying !!!"
