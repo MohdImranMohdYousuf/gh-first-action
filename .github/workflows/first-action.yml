@@ -6,9 +6,5 @@ jobs:
     steps:
       - name: This is CI part
         run: echo "Continueos integration is done"
-  CD:
-    needs: CI
-    runs-on: ubuntu-latest
-    steps:
       - name: This is CD part
         run: echo "Deploying !!!"
